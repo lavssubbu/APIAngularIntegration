@@ -1,0 +1,36 @@
+<p>company-list works!</p>
+
+<!--<ul *ngFor="let lstcompany of data">
+    <li>{{lstcompany.compId}} {{lstcompany.compName}}</li>
+</ul>-->
+
+<div>
+    <button class="btn btn-primary" (click)="addCompany()">Add Company</button>
+  </div>
+<table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies">
+        <td>{{ company.compId }}</td>
+        <td>{{ company.compName }}</td>
+        <td>
+          <!-- Link to details page -->
+          <button class="btn btn-info" (click)="viewDetails(company.compId)">Details</button>
+  
+          <!-- Link to update page -->
+          <button class="btn btn-warning" (click)="updateCompany(company.compId)">Update</button>
+  
+          <!-- Link to delete -->
+          <button class="btn btn-danger" (click)="deleteCompany(company.compId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+

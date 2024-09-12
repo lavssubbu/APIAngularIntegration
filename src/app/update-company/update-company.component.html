@@ -1,0 +1,10 @@
+<p>update-company works!</p>
+<p>Update Company</p>
+<form (ngSubmit)="onUpdate()">
+    <div class="form-group">
+        <label for="compName">Company Name</label>
+        <input type="text" class="form-control" id="compName" name="compName" [(ngModel)]="company.compName" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Company</button>
+</form>
+<a routerLink="/">Back to Company List</a>
